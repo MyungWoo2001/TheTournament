@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23231" systemVersion="23G93" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="League" representedClassName=".League" syncable="YES">
+        <attribute name="name" attributeType="String"/>
+        <attribute name="teamCount" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+    </entity>
+    <entity name="Match" representedClassName=".Match" syncable="YES">
+        <attribute name="date" attributeType="String"/>
+        <attribute name="index" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="recordID" attributeType="String"/>
+        <attribute name="round" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="summary" attributeType="String"/>
+        <attribute name="team1Goal" attributeType="String"/>
+        <attribute name="team1ID" attributeType="String"/>
+        <attribute name="team1RecordID" attributeType="String"/>
+        <attribute name="team2Goal" attributeType="String"/>
+        <attribute name="team2ID" attributeType="String"/>
+        <attribute name="team2RecordID" attributeType="String"/>
+        <relationship name="team1" maxCount="1" deletionRule="Nullify" destinationEntity="Team"/>
+        <relationship name="team2" maxCount="1" deletionRule="Nullify" destinationEntity="Team"/>
+    </entity>
+    <entity name="Team" representedClassName=".Team" syncable="YES">
+        <attribute name="dif" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="goals" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="logoImage" attributeType="Binary"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="pls" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="point" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="rank" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="recordID" attributeType="String"/>
+        <attribute name="teamID" attributeType="String"/>
+    </entity>
+    <entity name="Tournament" representedClassName=".Tournament" syncable="YES">
+        <attribute name="accessPassword" attributeType="String"/>
+        <attribute name="email" attributeType="String"/>
+        <attribute name="image" attributeType="Binary"/>
+        <attribute name="manager" attributeType="String"/>
+        <attribute name="name" attributeType="String"/>
+        <attribute name="phone" attributeType="String"/>
+        <attribute name="shortName" attributeType="String"/>
+        <attribute name="summary" attributeType="String"/>
+    </entity>
+</model>
